@@ -1,0 +1,14 @@
+---
+includes:
+- lib
+
+requires:
+- calc
+
+integration:
+  name: rspec
+
+mutation:
+  operators: full
+
+usage: opensource
