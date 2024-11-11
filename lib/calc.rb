@@ -23,7 +23,7 @@ class Calc
 			array.fetch(i)
 		end.inject(&:+)
 
-		evens = array[1] + array[3] + array[5]
+		evens = array.fetch(1) + array.fetch(3) + array.fetch(5)
 
 		((odds * 3 + evens) % 10).equal? array.fetch(7)
 	end

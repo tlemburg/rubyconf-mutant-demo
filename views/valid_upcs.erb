@@ -1,0 +1,20 @@
+<table class="table">
+<thead>
+<tr>
+<th>
+Movie
+</th>
+<th>
+Box Office as UPC
+</th>
+</tr>
+</thead>
+<tbody>
+<% @valid_upc_array.each do |hash| %>
+<tr>
+<td><%= hash.fetch(:title) %>
+<td><span style="color: <%= hash.fetch(:valid) ? 'green' : 'red' %>"><%= hash.fetch(:number).to_s[0..7].rjust(8, '0') %></span><span><%= hash.fetch(:number).to_s[8..] %></span>
+</tr>
+<% end %>
+</tbody>
+</table>
