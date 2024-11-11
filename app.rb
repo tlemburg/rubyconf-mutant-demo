@@ -1,6 +1,8 @@
 require 'sinatra'
 require_relative './lib/calc'
 
+set :static, true
+
 helpers do
 	def data
 		@data ||= JSON.parse(File.read(File.join(File.dirname(__FILE__), 'data.json')))
