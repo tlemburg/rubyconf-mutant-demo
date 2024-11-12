@@ -6,6 +6,10 @@
     font-size: 3rem;
 }
 
+.large-text {
+    font-size: 3em;
+}
+
 .table.smaller-text {
     font-size: 2rem;
 }
