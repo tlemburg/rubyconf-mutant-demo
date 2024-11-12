@@ -1,1 +1,22 @@
-Arrays same size: <%= @same_size %>
+<div class="text-box">
+<h1>
+    Checking Data: Are the arrays the same size?
+</h1>
+</div>
+<% if @reveal %>
+<div class="text-box reveal-box">
+Arrays same size: <%= @same_size %><br />
+Benedict Cumberbatch: last 14 movies (non-doc)<br />
+All 14 X-Men movies
+</div>
+<% else %>
+<div class="text-box reveal-box">
+    <a href="/1/reveal">Check</a>
+    </div>
+<% end %>
+
+<% if @reveal %>
+<div class="next-box text-box">
+    <a href="/2">Next</a>
+    </div>
+<% end %>

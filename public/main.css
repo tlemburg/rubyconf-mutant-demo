@@ -1,0 +1,35 @@
+.table>:not(caption)>*>* {
+    background-color: transparent;
+}
+
+.table {
+    font-size: 3rem;
+}
+
+.table.smaller-text {
+    font-size: 2rem;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0 2em;
+}
+
+.text-box {
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0.25em;
+}
+
+.next-box {
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+}
+
+.reveal-box {
+    margin-top: 6em;
+    text-align: center;
+    width: auto;
+}

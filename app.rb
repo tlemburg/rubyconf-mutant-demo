@@ -19,34 +19,49 @@ get '/' do
 end
 
 get '/1' do
+	erb :array_check
+end
+
+get '/1/reveal' do
 	calc = Calc.new
 
 	@same_size = calc.arrays_same_length?(
 		data.fetch("Benedict Cumberbatch").to_a,
 		data.fetch("X-Men").to_a
 	)
-	
+	@reveal = true
+
 	erb :array_check
 end
 
 get '/2' do
+	erb :best_average
+end
+
+get '/2/reveal' do
 	calc = Calc.new
 
 	@averages = data.map do |key, movie_hash|
 		avg = calc.avg(movie_hash.values).round
 		[key, avg]
 	end.to_h
+	@reveal = true
 
 	erb :best_average
 end
 
 get '/3' do
+	erb :best_median
+end
+
+get '/3/reveal' do
 	calc = Calc.new
 
 	@medians = data.map do |key, movie_hash|
 		median = calc.median(movie_hash.values)
 		[key, median]
 	end.to_h
+	@reveal = true
 
 	erb :best_median
 end
@@ -58,6 +73,10 @@ get '/4' do
 end
 
 get '/5' do
+	erb :valid_upcs
+end
+
+get '/5/reveal' do
 	calc = Calc.new
 
 	all_movies = data.fetch('Benedict Cumberbatch').merge(data.fetch("X-Men"))
@@ -73,6 +92,7 @@ get '/5' do
 			valid: valid
 		}
 	end
+	@reveal = true
 
 	erb :valid_upcs
 end
