@@ -31,5 +31,10 @@ describe Calc do
 			arr = [5,1,5,1,5,1,7,9]
 			expect(Calc.new.valid_upc_check_digit_gtin8?(arr)).to be true
 		end
+
+    it 'returns false on an invalid checksum' do
+			arr = [5,1,5,1,5,1,7,8]
+			expect(Calc.new.valid_upc_check_digit_gtin8?(arr)).to be false
+		end
 	end
 end
