@@ -27,8 +27,4 @@ class Calc
 
 		((odds * 3 + evens) % 10).equal? array.fetch(7)
 	end
-
-	def untested_method
-		'hello_untested'
-	end
 end
