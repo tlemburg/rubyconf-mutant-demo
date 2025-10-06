@@ -5,7 +5,9 @@ require_relative '../lib/calc'
 describe Calc do
   describe '#arrays_same_length?' do
     it 'returns true when the arrays are the same length' do
-      expect(Calc.new.arrays_same_length?(['a', 'b', 'c'], [1,2,3])).to be true
+      expect(
+        Calc.new.arrays_same_length?(['a', 'b', 'c'], [1,2,3])
+      ).to be true
     end
   end
 
